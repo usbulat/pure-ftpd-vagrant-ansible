@@ -5,6 +5,6 @@
 
   tasks:
     - name: Install pure-ftpd package
-      yum: name=/vagrant/pure-ftpd-1.0.42-1.x86_64.rpm state=present
+      yum: name=/tmp/pure-ftpd-1.0.42-1.x86_64.rpm state=present
       sudo: yes
 

@@ -14,6 +14,8 @@ Vagrant.configure("2") do |config|
   # boxes at https://atlas.hashicorp.com/search.
   
   config.vm.box = "centos/7"
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.vm.provision :file, source: "./pure-ftpd-1.0.42-1.x86_64.rpm", destination: "/tmp/pure-ftpd-1.0.42-1.x86_64.rpm"
   config.vm.provision :shell, path: "provision.sh"
 
   #  Можно запустить playbook отсюда (закомментить предыдущую строчку) !!!!!!!!!!!!!!!!!!
